@@ -4,6 +4,7 @@ import { FormsModule,FormGroup, FormControlName } from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 //Componentes
 import { LoginComponent } from './componentes/users/login/login.component';
@@ -28,6 +29,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 //Variable de configuracion
 import { environment } from '../environments/environment';
+import { MedidasComponent } from './componentes/productos/medidas/medidas.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { environment } from '../environments/environment';
     AyudaComponent,
     PrincipalComponent,
     InventarioComponent,
-    UltimoComponent
+    UltimoComponent,
+    MedidasComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [
     ConexionService,

@@ -23,6 +23,12 @@ export class LoginComponent implements OnInit {
     this.login.Login(this.email, this.password)
     .then((res) => {
       this.router.navigate(['/principal']);
+      const newLocal = this.email = 'probar@gmail.com';
+      if (newLocal){
+        console.log('funciona');
+      } else{
+        console.log('no funciona');
+      }
     }).catch((error) => {
       this.router.navigate(['/user/login']);
     });
