@@ -30,6 +30,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 //Variable de configuracion
 import { environment } from '../environments/environment';
 import { MedidasComponent } from './componentes/productos/medidas/medidas.component';
+import { IngresosComponent } from './componentes/nuevos/ingresos/ingresos.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MedidasComponent } from './componentes/productos/medidas/medidas.compon
     PrincipalComponent,
     InventarioComponent,
     UltimoComponent,
-    MedidasComponent
+    MedidasComponent,
+    IngresosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
-import { InventarioComponent } from './componentes/productos/inventario/inventario.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { AyudaComponent } from './componentes/principal/ayuda/ayuda.component';
 import { ContactoComponent } from './componentes/principal/contacto/contacto.component';
 import { NuestrosProductosComponent } from './componentes/principal/nuestros-productos/nuestros-productos.component';
@@ -10,6 +10,9 @@ import { IntermedioComponent } from './componentes/productos/intermedio/intermed
 import { NuevoComponent } from './componentes/productos/nuevo/nuevo.component';
 import { LoginComponent } from './componentes/users/login/login.component';
 import { PrincipalComponent } from './componentes/principal/principal/principal.component';
+import { IngresosComponent } from './componentes/nuevos/ingresos/ingresos.component';
+import { InventarioComponent } from './componentes/productos/inventario/inventario.component';
+
 
 const routes: Routes = [
   { path: 'principal', component: PrincipalComponent },
@@ -22,6 +25,7 @@ const routes: Routes = [
   { path: 'principal/nuestros-productos', component: NuestrosProductosComponent },
   { path: 'principal/contacto', component: ContactoComponent },
   { path: 'principal/ayuda', component: AyudaComponent },
+  { path: 'admin/nuevosdatos', component: IngresosComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'principal' }
 ];
 

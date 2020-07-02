@@ -31,6 +31,7 @@
         </ul>
         <a class="navbar-brand hidden-md-down"></a>
         <ul class="navbar-nav ml-auto">
+            <!-- <i class="fas fa-user-alt"></i> -->
             <svg *ngIf="isLogged" class="bi bi-person-dash-fill" (click)="onClickLogout()" width=" 1em " height="1em " viewBox="0 0 16 16 " fill="currentColor " xmlns="http://www.w3.org/2000/svg ">
                 <path fill-rule="evenodd " d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 100-6 3 3 0 000 6zm5-.5a.5.5 0 01.5-.5h4a.5.5 0 010 1h-4a.5.5 0 01-.5-.5z " clip-rule="evenodd "/>
               </svg>
@@ -48,22 +49,22 @@
                     <div class="card-header text-center">
                         <h1>Ingreso de Materia Prima</h1>
                         <div class="card-body text-center">
-                            <!-- <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+                            <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
                                 <div class="form-label-group" class="form-group">
-                                    <select class="form-control" name="cliente" #cliente="ngModel" [(ngModel)]="baseService.selectedProduct.cliente" value="seleccione">
+                                    <select class="form-control" name="cliente" #cliente="ngModel" [(ngModel)]="conexion.selectNuevo.proveedor" value="seleccione">
                                     <option class="placeholder" value="Seleccione"> 
                                     Seleccione un proveedor 
                                     </option>
-                                    <option *ngFor="let provee of listarProveedores"> 
+                                    <option *ngFor="let provee of ListarProveedores"> 
                                          {{provee.proveedor}}
                                     </option> 
                                 </select>
                                     <br>
-                                    <input type="text" class="form-control" name="peso" #peso="ngModel" [(ngModel)]="baseService.selectedProduct.peso" placeholder="Peso">
+                                    <input type="text" class="form-control" name="peso" #peso="ngModel" [(ngModel)]="conexion.selectNuevo.peso" placeholder="Peso">
                                     <br>
-                                    <input type="text" class="form-control" name="codigo" #codigo="ngModel" [(ngModel)]="baseService.selectedProduct.codigo" placeholder="Codigo">
+                                    <input type="text" class="form-control" name="codigo" #codigo="ngModel" [(ngModel)]="conexion.selectNuevo.codigo" placeholder="Codigo">
                                     <br>
-                                    <input text="text" class="form-control" name="envio" #envio="ngModel" [(ngModel)]="baseService.selectedProduct.envio" placeholder="Envio">
+                                    <input text="text" class="form-control" name="envio" #envio="ngModel" [(ngModel)]="conexion.selectNuevo.envio" placeholder="Envio">
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-block btn-primary" type="submit">
@@ -75,7 +76,7 @@
                                         Nuevo
                                     </button>
                                 </div>
-                            </form> -->
+                            </form>
                         </div>
                     </div>
                 </div>
