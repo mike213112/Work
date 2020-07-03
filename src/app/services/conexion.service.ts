@@ -24,7 +24,7 @@ export class ConexionService {
   ObtenerPerfil: AngularFireList<any>;
   ObtenerMedidas: AngularFireList<any>;
 
-  horarios: Horario = new Horario();
+  nuevohorario: Horario = new Horario();
   selectNuevo: Principio = new Principio();
   selectIntermedio: Intermedio = new Intermedio();
   selectFinal: Final = new Final();
@@ -65,9 +65,9 @@ export class ConexionService {
     });
   }
 
-  Horarios(horario: Horario){
+  Horarios(nuevo: Horario){
     this.ObtenerHorario.push({
-      horario: horario.horario
+      horario: nuevo.horario
     });
   }
 
