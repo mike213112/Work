@@ -31,6 +31,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { MedidasComponent } from './componentes/productos/medidas/medidas.component';
 import { IngresosComponent } from './componentes/nuevos/ingresos/ingresos.component';
+import { ProveedorComponent } from './componentes/models/proveedor/proveedor.component';
+import { HorarioComponent } from './componentes/models/horario/horario.component';
+import { PerfilComponent } from './componentes/models/perfil/perfil.component';
+import { MedidaComponent } from './componentes/models/medida/medida.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,11 @@ import { IngresosComponent } from './componentes/nuevos/ingresos/ingresos.compon
     InventarioComponent,
     UltimoComponent,
     MedidasComponent,
-    IngresosComponent
+    IngresosComponent,
+    ProveedorComponent,
+    HorarioComponent,
+    PerfilComponent,
+    MedidaComponent
   ],
   imports: [
     BrowserModule,

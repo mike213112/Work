@@ -24,9 +24,10 @@ export class ConexionService {
   ObtenerPerfil: AngularFireList<any>;
   ObtenerMedidas: AngularFireList<any>;
 
-  selectFinal: Final = new Final();
-  selectIntermedio: Intermedio = new Intermedio();
+  horarios: Horario = new Horario();
   selectNuevo: Principio = new Principio();
+  selectIntermedio: Intermedio = new Intermedio();
+  selectFinal: Final = new Final();
 
   constructor(private database: AngularFireDatabase) { }
 
@@ -57,17 +58,17 @@ export class ConexionService {
   getMateriaFinal(){
     return this.ListarMateriaFinal = this.database.list('MateriaFinal');
   }
-  
+
   Proveedores(proveedo: Proveedor){
     this.ObtenerProveedores.push({
       proveedor: proveedo.proveedor
     });
-  }  
+  }
 
   Horarios(horario: Horario){
     this.ObtenerHorario.push({
       horario: horario.horario
-    })
+    });
   }
 
   Medidas(medida: Medida){
