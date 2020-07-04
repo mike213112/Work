@@ -98,6 +98,7 @@ export class ConexionService {
   MateriaIntermedia(intermedia: Intermedio){
     this.ListarMateriaIntermedia.push({
       fecha: intermedia.fecha,
+      codigo: intermedia.codigo,
       peso: intermedia.peso
     });
   }

@@ -48,22 +48,47 @@
                     <div class="card-header text-center">
                         <h1>Ingreso de Materia Prima</h1>
                         <div class="card-body text-center">
-                            <!-- <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
-                                <div class="form-label-group" class="form-group">
-                                    <select class="form-control" name="cliente" #cliente="ngModel" [(ngModel)]="baseService.selectedProduct.cliente" value="seleccione">
-                                    <option class="placeholder" value="Seleccione"> 
-                                    Seleccione un proveedor 
-                                    </option>
-                                    <option *ngFor="let provee of listarProveedores"> 
-                                         {{provee.proveedor}}
-                                    </option> 
+                            <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="operador" name="operador" #operador="ngModel" [(ngModel)]="finalService.selectFinal.operador" placeholder="Operador">
+                                    <br>
+                                    <input type="text" class="form-control" id="linea" name="linea" #linea="ngModel" [(ngModel)]="finalService.selectFinal.linea" placeholder="Linea">
+                                    <br>
+                                    <select class="form-control" id="horario" name="horario" #horario="ngModel" [(ngModel)]="finalService.selectFinal.horario">
+                                <option class="form-control"
+                                value="Seleccione"> Seleccione el horario </option>
+                                <option *ngFor="let llamarhorario of ListarHorario">
+                                    {{llamarhorario.horario}}
+                                </option>
                                 </select>
                                     <br>
-                                    <input type="text" class="form-control" name="peso" #peso="ngModel" [(ngModel)]="baseService.selectedProduct.peso" placeholder="Peso">
+                                    <select class="form-control" id="perfil" name="perfil" #perfil="ngModel" [(ngModel)]="finalService.selectFinal.perfil">
+                                    <option class="form-control"
+                                    value="Seleccione"> Seleccione el Perfil 
+                                    </option>
+                                    <option *ngFor="let llamarperfiles of ListarPerfil"> 
+                                        {{llamarperfiles.perfil}}
+                                    </option>
+                                </select>
                                     <br>
-                                    <input type="text" class="form-control" name="codigo" #codigo="ngModel" [(ngModel)]="baseService.selectedProduct.codigo" placeholder="Codigo">
+                                    <div class="form-group">
+                                        <label class="color">Fecha: </label>
+                                        <input id="fecha" name="fecha" #fecha="ngModel" [(ngModel)]="finalService.selectFinal.fecha" type="date">
+                                    </div>
+                                    <select class="form-control" id="codigo" name="codigo" #codigo="ngModel" [(ngModel)]="finalService.selectFinal.codigo">
+                                    <option value="Seleccione">Seleccionar el codigo</option>
+                                    <option *ngFor="let product of ListarIntermedio">
+                                        {{product.codigo}}
+                                    </option>
+                                    </select>
                                     <br>
-                                    <input text="text" class="form-control" name="envio" #envio="ngModel" [(ngModel)]="baseService.selectedProduct.envio" placeholder="Envio">
+                                    <select class="form-control" id="medidas" name="medidas" #medidas="ngModel" [(ngModel)]="finalService.selectFinal.medidas">
+                                    <option class="form-control"
+                                    value="Seleccione"> Seleccione las medidas </option>
+                                    <option *ngFor="let llamarmedidas of ListarMedidas"> 
+                                        {{llamarmedidas.medida}}
+                                    </option>
+                                </select>
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-block btn-primary" type="submit">
@@ -71,11 +96,11 @@
                                     </button>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-block btn-secondary active" type="reset" (click)="resetForm(myform)"> 
+                                    <button class="btn btn-block btn-secondary active" type="reset" (click)="resetForm(productForm)"> 
                                         Nuevo
                                     </button>
                                 </div>
-                            </form> -->
+                            </form>
                         </div>
                     </div>
                 </div>

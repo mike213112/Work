@@ -19,7 +19,7 @@ export class MedidaComponent implements OnInit {
 
   @ViewChild('btnClose') btnClose: ElementRef;
   ngOnInit(): void {
-    this.medidaService.getHorario()
+    this.medidaService.getMedidas()
     .snapshotChanges()
     .subscribe(item => {
       this.ListarMedia = [];

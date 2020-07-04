@@ -30,7 +30,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 //Variable de configuracion
 import { environment } from '../environments/environment';
-import { MedidasComponent } from './componentes/productos/medidas/medidas.component';
 import { IngresosComponent } from './componentes/nuevos/ingresos/ingresos.component';
 import { ProveedorComponent } from './componentes/models/proveedor/proveedor.component';
 import { HorarioComponent } from './componentes/models/horario/horario.component';
@@ -50,7 +49,6 @@ import { MedidaComponent } from './componentes/models/medida/medida.component';
     PrincipalComponent,
     InventarioComponent,
     UltimoComponent,
-    MedidasComponent,
     IngresosComponent,
     ProveedorComponent,
     HorarioComponent,
