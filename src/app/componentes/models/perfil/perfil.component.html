@@ -12,11 +12,6 @@
                     <div class="form-label-group" class="form-group">
                         <label for="validationServer01" class="col-form-label">Perfil:</label>
                         <input type="text" id="perfil" class="form-control" name="perfil" #perfil="ngModel" [(ngModel)]="perfilService.nuevoperfil.perfil" placeholder="Perfil">
-                        <!-- <div *ngIf="horario.invalid && (horario.dirty || horario.touched)" class="alert alert-danger">
-                            <div *ngIf="horario.errors.required">
-                                Campo requerido
-                            </div>
-                        </div> -->
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-block btn-primary">Guardar </button>
                             <button type="button" class="btn btn-block btn-secondary" #btnClose data-dismiss="modal">Cerrar</button>
