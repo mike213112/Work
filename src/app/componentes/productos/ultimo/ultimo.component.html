@@ -40,66 +40,76 @@
         </ul>
     </div>
 </nav>
-<section id="insert" class="mb-5 mt-5">
+<section id="insert" class="mb-4 mt-4">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+            <div class="col-xs-12 col-sm-7 col-md-7 mx-auto">
                 <div class="card_login">
                     <div class="card-header text-center">
                         <h1>Ingreso de Materia Prima</h1>
                         <div class="card-body text-center">
                             <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="operador" name="operador" #operador="ngModel" [(ngModel)]="finalService.selectFinal.operador" placeholder="Operador">
-                                    <br>
-                                    <input type="text" class="form-control" id="linea" name="linea" #linea="ngModel" [(ngModel)]="finalService.selectFinal.linea" placeholder="Linea">
-                                    <br>
-                                    <select class="form-control" id="horario" name="horario" #horario="ngModel" [(ngModel)]="finalService.selectFinal.horario">
-                                <option class="form-control"
-                                value="Seleccione"> Seleccione el horario </option>
-                                <option *ngFor="let llamarhorario of ListarHorario">
-                                    {{llamarhorario.horario}}
-                                </option>
-                                </select>
-                                    <br>
-                                    <select class="form-control" id="perfil" name="perfil" #perfil="ngModel" [(ngModel)]="finalService.selectFinal.perfil">
-                                    <option class="form-control"
-                                    value="Seleccione"> Seleccione el Perfil 
-                                    </option>
-                                    <option *ngFor="let llamarperfiles of ListarPerfil"> 
-                                        {{llamarperfiles.perfil}}
-                                    </option>
-                                </select>
-                                    <br>
-                                    <div class="form-group">
-                                        <label class="color">Fecha: </label>
-                                        <input id="fecha" name="fecha" #fecha="ngModel" [(ngModel)]="finalService.selectFinal.fecha" type="date">
+                                <div class="form-group form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" id="operador" name="operador" #operador="ngModel" [(ngModel)]="finalService.selectFinal.operador" placeholder="Operador">
                                     </div>
-                                    <select class="form-control" id="codigo" name="codigo" #codigo="ngModel" [(ngModel)]="finalService.selectFinal.codigo">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" id="linea" name="linea" #linea="ngModel" [(ngModel)]="finalService.selectFinal.linea" placeholder="Linea">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <select class="form-control" id="horario" name="horario" #horario="ngModel" [(ngModel)]="finalService.selectFinal.horario">
+                                        <option class="form-control"
+                                        value="Seleccione"> Seleccione el horario </option>
+                                        <option *ngFor="let llamarhorario of ListarHorario">
+                                            {{llamarhorario.horario}}
+                                        </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <select class="form-control" id="perfil" name="perfil" #perfil="ngModel" [(ngModel)]="finalService.selectFinal.perfil">
+                                        <option class="form-control"
+                                        value="Seleccione"> Seleccione el Perfil 
+                                        </option>
+                                        <option *ngFor="let llamarperfiles of ListarPerfil"> 
+                                            {{llamarperfiles.perfil}}
+                                        </option>
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div class="form-group row">
+                                        <label class="color col-sm-2 col-form-label">Fecha: </label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control" id="fecha" name="fecha" #fecha="ngModel" [(ngModel)]="finalService.selectFinal.fecha" type="date">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <select class="form-control" id="codigo" name="codigo" #codigo="ngModel" [(ngModel)]="finalService.selectFinal.codigo">
                                     <option value="Seleccione">Seleccionar el codigo</option>
                                     <option *ngFor="let product of ListarIntermedio">
                                         {{product.codigo}}
                                     </option>
                                     </select>
-                                    <br>
-                                    <select class="form-control" id="medidas" name="medidas" #medidas="ngModel" [(ngModel)]="finalService.selectFinal.medidas">
-                                    <option class="form-control"
-                                    value="Seleccione"> Seleccione las medidas </option>
-                                    <option *ngFor="let llamarmedidas of ListarMedidas"> 
-                                        {{llamarmedidas.medida}}
-                                    </option>
-                                </select>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <select class=" form-control" id="medidas" name="medidas" #medidas="ngModel" [(ngModel)]="finalService.selectFinal.medidas ">
+                                        <option class="form-control "
+                                        value="Seleccione "> Seleccione las medidas </option>
+                                        <option *ngFor="let llamarmedidas of ListarMedidas "> 
+                                            {{llamarmedidas.medida}}
+                                        </option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <button class="btn btn-block btn-primary" type="submit">
+                                <div class="form-group ">
+                                    <button class="btn btn-block btn-primary " type="submit ">
                                         Ingresar
                                     </button>
                                 </div>
-                                <div class="form-group">
-                                    <button class="btn btn-block btn-secondary active" type="reset" (click)="resetForm(productForm)"> 
+                                <!-- <div class="form-group ">
+                                    <button class="btn btn-block btn-secondary active " type="reset " (click)="resetForm(productForm) "> 
                                         Nuevo
                                     </button>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
