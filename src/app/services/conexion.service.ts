@@ -25,6 +25,9 @@ export class ConexionService {
   ObtenerMedidas: AngularFireList<any>;
 
   nuevohorario: Horario = new Horario();
+  nuevamedida: Medida = new Medida();
+  nuevoperfil: Perfil = new Perfil();
+  nuevoproveedor: Proveedor = new Proveedor();
   selectNuevo: Principio = new Principio();
   selectIntermedio: Intermedio = new Intermedio();
   selectFinal: Final = new Final();

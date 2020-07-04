@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ToastrModule } from 'ngx-toastr';
 
 //Componentes
 import { LoginComponent } from './componentes/users/login/login.component';
@@ -62,8 +63,9 @@ import { MedidaComponent } from './componentes/models/medida/medida.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     FormsModule,
-    BrowserAnimationsModule,
-    BsDatepickerModule.forRoot()
+    ToastrModule.forRoot(),
+    BsDatepickerModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [
     ConexionService,

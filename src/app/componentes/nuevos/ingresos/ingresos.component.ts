@@ -12,8 +12,4 @@ export class IngresosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Editar(){
-    
-  }
-
 }

@@ -1,5 +1,5 @@
 <div class="modal fade" id="modalHorario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Nuevo Horario</h5>
@@ -8,16 +8,18 @@
       </button>
             </div>
             <div class="modal-body ">
-                <form id="formulario" name="formulario" #myform="ngForm" (ngSubmit)="onSubmit(myform)">
-                    <!-- <div class="form-label-group" class="form-group">
-                        <input type="hidden" id="$id" name="$id" #$id="ngModel" [(ngModel)]="this.horario.nuevohorario.$id" class="form-control">
-                    </div> -->
+                <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
                     <div class="form-label-group" class="form-group">
-                        <label for="message-text" class="col-form-label">Nombre:</label>
+                        <label for="validationServer01" class="col-form-label">Horario:</label>
                         <input type="text" id="horario" class="form-control" name="horario" #horario="ngModel" [(ngModel)]="horarioService.nuevohorario.horario" placeholder="Horario">
+                        <!-- <div *ngIf="horario.invalid && (horario.dirty || horario.touched)" class="alert alert-danger">
+                            <div *ngIf="horario.errors.required">
+                                Campo requerido
+                            </div>
+                        </div> -->
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-block btn-secondary" #btnClose data-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-block btn-primary">Guardar </button>
+                            <button type="button" class="btn btn-block btn-secondary" #btnClose data-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </form>
