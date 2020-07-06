@@ -1,0 +1,37 @@
+:root {
+    --primary: #111854;
+    --light: #ffffff;
+    --grey: #efefef;
+    --silver: #00ced1;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Mull', sans-serif;
+    font-weight: 300;
+    color: var(--primary);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bg-primario {
+    background-color: var(--primary) !important;
+}
+
+.bg-silvere {
+    background-color: #c0c0c0;
+}
+
+#sidebar-container {
+    min-height: 100vh;
+}
+
+#sidebar-container .logo {
+    padding: .875rem 1.25rem;
+}
+
+#sidebar-container .menu {
+    width: 18rem;
+}

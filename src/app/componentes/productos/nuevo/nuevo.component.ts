@@ -87,7 +87,7 @@ export class NuevoComponent implements OnInit {
     else{
       this.conexion.MateriaPrima(myform.value);
       this.resetForm(myform);
-      this.toast.success('Dato ingresado correctamente');
+      this.toast.success('Datos ingresados correctamente');
     }
 
   }

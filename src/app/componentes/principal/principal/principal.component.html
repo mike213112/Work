@@ -1,11 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark " *ngIf="!isLogged">
     <a class="navbar-brand" href="/principal" *ngIf='!isLogged'>Principal</a>
-    <a class="navbar-brand" href="/principal" *ngIf="isLogged">Diseños y Rolados S.A</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="!isLogged">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" *ngIf='!isLogged'>
                 <a class="nav-link" [routerLink]="['/principal/nuestros-productos']" routerLinkActive="active"> Nuestros Productos </a>
@@ -16,24 +15,9 @@
             <li class="nav-item" *ngIf="!isLogged">
                 <a class="nav-link" [routerLink]="['/principal/ayuda']" routerLinkActive="active"> Ayuda </a>
             </li>
-            <li class="nav-item" *ngIf="isLogged">
-                <a class="nav-link" [routerLink]="['/principal/user/insert']" routerLinkActive="active">Ingreso de Materia Prima </a>
-            </li>
-            <li class="nav-item" *ngIf="isLogged">
-                <a class="nav-link" [routerLink]="['/principal/user/intermediate']" routerLinkActive="active"> Producto intermedio </a>
-            </li>
-            <li class="nav-item" *ngIf="isLogged">
-                <a class="nav-link" [routerLink]="['/principal/user/final']" routerLinkActive="active"> Final </a>
-            </li>
-            <li class="nav-item" *ngIf="isLogged">
-                <a class="nav-link" [routerLink]="['/principal/user/inventory']" routerLinkActive="active"> Inventario</a>
-            </li>
         </ul>
         <a class="navbar-brand hidden-md-down"></a>
         <ul class="navbar-nav ml-auto">
-            <svg *ngIf="isLogged" class="bi bi-person-dash-fill" (click)="onClickLogout()" width=" 1em " height="1em " viewBox="0 0 16 16 " fill="currentColor " xmlns="http://www.w3.org/2000/svg ">
-                <path fill-rule="evenodd " d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 100-6 3 3 0 000 6zm5-.5a.5.5 0 01.5-.5h4a.5.5 0 010 1h-4a.5.5 0 01-.5-.5z " clip-rule="evenodd "/>
-              </svg>
             <li class="nav-item" *ngIf="!isLogged">
                 <a class="nav-link" [routerLink]="['/user/login']" routerLinkActive="active">
                     <i class="fas fa-user"></i> Login
@@ -64,7 +48,7 @@
         </div>
     </div>
 </div>-->
-<div class="row row-cols-1 row-cols-md-3 mover" *ngIf="!isLogged">
+<!-- <div class="row row-cols-1 row-cols-md-3 mover" *ngIf="!isLogged">
     <div class="col mb-4">
         <div class="card">
             <img src="../../../assets/imagenes/fondo.jpg" class="card-img-top" alt="...">
@@ -91,5 +75,43 @@
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
             </div>
         </div>
+    </div>
+</div> -->
+<div class="d-flex" *ngIf="isLogged">
+    <div id="sidebar-container" class="bg-primario">
+        <div class="logo">
+            <h4 class="text-light font-weight-bold">
+                Diseños y Rolados S.A
+            </h4>
+        </div>
+        <div class="menu">
+            <a href="/principal/user/insert" class="d-block text-light p-3">
+                <i class="fas fa-plus-square mr-2 lead"></i> Materia Prima
+            </a>
+            <a href="/principal/user/intermediate" class="d-block text-light p-3">
+                <i class="fas fa-plus-square mr-2 lead"></i> Materia Intermedia
+            </a>
+            <a href="/principal/user/final" class="d-block text-light p-3">
+                <i class="fas fa-plus-square mr-2 lead"></i> Materia Final
+            </a>
+            <a href="/principal/user/inventory" class="d-block text-light p-3">
+                <i class="fas fa-indent mr-2 "></i> Inventario
+            </a>
+        </div>
+    </div>
+    <div class="w-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-silvere">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ">
+                    <button class="btn" (click)="onClickLogout()">
+                        <i class="fas fa-user-cog"></i> Cerrar Sesion
+                    </button>
+                </ul>
+            </div>
+        </nav>
     </div>
 </div>
