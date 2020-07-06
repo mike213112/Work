@@ -6,7 +6,6 @@
 }
 
 body {
-    overflow: hidden;
     font-family: 'Mull', sans-serif;
     font-weight: 300;
     color: var(--primary);
@@ -34,4 +33,28 @@ a:hover {
 
 #sidebar-container .menu {
     width: 18rem;
+}
+
+.container {
+    max-width: 120%;
+    max-height: 68%;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+
+.card-body th,
+.card-body td {
+    border-right: 1px solid #ccc;
+}
+
+.card-body th:last-child,
+.card-body td:last-child {
+    border-right: 0;
 }

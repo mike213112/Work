@@ -1,23 +1,33 @@
 <div class="d-flex" *ngIf="isLogged">
     <div id="sidebar-container" class="bg-primario">
         <div class="logo">
-            <h4 class="text-light font-weight-bold">
-                Diseños y Rolados S.A
-            </h4>
+            <a class="text-light font-weight-bold" href="/principal">
+                <h4 class="font-weight-bold">
+                    Diseños y Rolados S.A
+                </h4>
+            </a>
         </div>
         <div class="menu">
-            <a href="/principal/user/insert" class="d-block text-light p-3">
+            <a href="/principal/user/insert" class="d-block text-light p-3 font-weight-bold">
                 <i class="fas fa-plus-square mr-2 lead"></i> Materia Prima
             </a>
-            <a href="/principal/user/intermediate" class="d-block text-light p-3">
+            <a href="/principal/user/intermediate" class="d-block text-light p-3 font-weight-bold">
                 <i class="fas fa-plus-square mr-2 lead"></i> Materia Intermedia
             </a>
-            <a href="/principal/user/final" class="d-block text-light p-3">
+            <a href="/principal/user/final" class="d-block text-light p-3 font-weight-bold">
                 <i class="fas fa-plus-square mr-2 lead"></i> Materia Final
             </a>
-            <a href="/principal/user/inventory" class="d-block text-light p-3">
+            <!-- <a href="/principal/user/inventory" class="d-block text-light p-3">
                 <i class="fas fa-indent mr-2 "></i> Inventario
+            </a> -->
+            <a class="nav-link dropdown-toggle d-block text-light p-3 bg-primario font-weight-bold" href="/principal/user/inventory" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-indent mr-2"></i> Inventario
             </a>
+            <div class="dropdown-menu bg-primario" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-light font-weight-bold" href="#">Materia Prima</a>
+                <a class="dropdown-item text-light font-weight-bold" href="#">Materia Intermedia</a>
+                <a class="dropdown-item text-light font-weight-bold" href="#">Materia Final</a>
+            </div>
         </div>
     </div>
     <div class="w-100">
@@ -40,7 +50,7 @@
                         <div class="col-lg-12 col-lg-12 col-md-12 mx-auto">
                             <div class="card_login">
                                 <div class="card-header">
-                                    <h1 style="text-align: center;">Ingreso de Materia Prima</h1>
+                                    <h1 style="text-align: center;" class="font-weight-bold">Ingreso de Materia Final</h1>
                                     <div class="card-body">
                                         <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
                                             <div class="form-group form-row">

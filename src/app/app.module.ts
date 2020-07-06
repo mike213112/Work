@@ -35,6 +35,9 @@ import { ProveedorComponent } from './componentes/models/proveedor/proveedor.com
 import { HorarioComponent } from './componentes/models/horario/horario.component';
 import { PerfilComponent } from './componentes/models/perfil/perfil.component';
 import { MedidaComponent } from './componentes/models/medida/medida.component';
+import { MateriaprimaComponent } from './componentes/productos/inventario/materiaprima/materiaprima.component';
+import { MateriaintermediaComponent } from './componentes/productos/inventario/materiaintermedia/materiaintermedia.component';
+import { MateriafinalComponent } from './componentes/productos/inventario/materiafinal/materiafinal.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,10 @@ import { MedidaComponent } from './componentes/models/medida/medida.component';
     ProveedorComponent,
     HorarioComponent,
     PerfilComponent,
-    MedidaComponent
+    MedidaComponent,
+    MateriaprimaComponent,
+    MateriaintermediaComponent,
+    MateriafinalComponent
   ],
   imports: [
     BrowserModule,

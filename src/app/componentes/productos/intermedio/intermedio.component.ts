@@ -55,10 +55,10 @@ export class IntermedioComponent implements OnInit {
     if (fecha === '') {
       this.toast.error('No ha definido una fecha');
     }
-    if (peso === '') {
+    else if (peso === '') {
       this.toast.error('El campo peso está vacio');
     }
-    if (codigo === '') {
+    else if (codigo === '') {
       this.toast.error('El campo codigo está vacio');
     }
     else{

@@ -22,9 +22,9 @@
                 <i class="fas fa-indent mr-2"></i> Inventario
             </a>
             <div class="dropdown-menu bg-primario" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item text-light font-weight-bold" href="#">Materia Prima</a>
-                <a class="dropdown-item text-light font-weight-bold" href="#">Materia Intermedia</a>
-                <a class="dropdown-item text-light font-weight-bold" href="#">Materia Final</a>
+                <a class="dropdown-item text-light font-weight-bold" href="principal/user/raw_inventory">Materia Prima</a>
+                <a class="dropdown-item text-light font-weight-bold" href="principal/user/intermedia_inventory">Materia Intermedia</a>
+                <a class="dropdown-item text-light font-weight-bold" href="principal/user/final_inventory">Materia Final</a>
             </div>
         </div>
     </div>
@@ -51,38 +51,26 @@
                         <thead>
                             <tr>
                                 <th class="sticky">No.</th>
-                                <th class="sticky">Operador</th>
-                                <th class="sticky">Linea</th>
-                                <th class="sticky">Horario</th>
-                                <th class="sticky">Perfil</th>
-                                <th class="sticky">Fecha</th>
+                                <th class="sticky">Proveedor</th>
+                                <th class="sticky">Peso</th>
                                 <th class="sticky">Codigo</th>
-                                <th class="sticky">Medidas</th>
+                                <th class="sticky">Envio</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr td *ngFor="let listar of ListarDatos; index as i">
+                            <tr td *ngFor="let listar of ListarPrima; index as i">
                                 <th scope="row">{{i+1}}</th>
                                 <td>
-                                    {{listar.operador}}
+                                    {{listar.proveedor}}
                                 </td>
                                 <td>
-                                    {{listar.linea}}
-                                </td>
-                                <td>
-                                    {{listar.horario}}
-                                </td>
-                                <td>
-                                    {{listar.perfil}}
-                                </td>
-                                <td>
-                                    {{listar.fecha}}
+                                    {{listar.peso}}
                                 </td>
                                 <td>
                                     {{listar.codigo}}
                                 </td>
                                 <td>
-                                    {{listar.medidas}}
+                                    {{listar.envio}}
                                 </td>
                                 <!--<td *ngFor="let listar of listarMaterialesFinales">
                                         <a class="btn btn-secondary text-white" (click)="onEdit(product)">

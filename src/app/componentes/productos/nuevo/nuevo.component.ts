@@ -60,6 +60,10 @@ export class NuevoComponent implements OnInit {
     });
   }
 
+  MateriaPrimar() {
+    this.router.navigate(['/principal/user/first_inventory']);
+  }
+
   onClickLogout(){
     this.autenticar.Logout();
     this.router.navigate(['/principal']);
@@ -71,17 +75,16 @@ export class NuevoComponent implements OnInit {
     const codigo = (<HTMLInputElement>document.getElementById('codigo')).value;
     const envio = (<HTMLInputElement>document.getElementById("envio")).value;
 
-    console.log(proveedor1);
     if (proveedor1 === 'Seleccione') {
       this.toast.error('No ha seleccionado ningún proveedor');
     }
-    if (peso === '') {
+    else if (peso === '') {
       this.toast.error('El campo peso está vacio');
     }
-    if (codigo === '') {
+    else if (codigo === '') {
       this.toast.error('El campo codigo está vacio');
     }
-    if (envio === '') {
+    else if (envio === '') {
       this.toast.error('El campo envio está vacio');
     }
     else{

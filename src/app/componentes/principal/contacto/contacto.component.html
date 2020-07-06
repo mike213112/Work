@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item" *ngIf="!isLogged">
-                <a class="nav-link" [routerLink]="['/principal/nuestros-productos']" routerLinkActive="active"> Nuestros Productos </a>
+                <a class="nav-link" [routerLink]="['/principal/nuestros_productos']" routerLinkActive="active"> Nuestros Productos </a>
             </li>
             <li class="nav-item" *ngIf="!isLogged">
                 <a class="nav-link" [routerLink]="['/principal/contacto']" routerLinkActive="active"> Contacto </a>
@@ -15,23 +15,13 @@
             <li class="nav-item" *ngIf="!isLogged">
                 <a class="nav-link" [routerLink]="['/principal/ayuda']" routerLinkActive="active"> Ayuda </a>
             </li>
-            <li class="nav-item" *ngIf="isLogged">
-                <a class="nav-link" [routerLink]="['/principal/user/insert']" routerLinkActive="active">Ingreso de Materia Prima </a>
-            </li>
-            <li class="nav-item" *ngIf="isLogged">
-                <a class="nav-link" [routerLink]="['/principal/user/intermediate']" routerLinkActive="active"> Producto intermedio </a>
-            </li>
-            <li class="nav-item" *ngIf="isLogged">
-                <a class="nav-link" [routerLink]="['/principal/user/final']" routerLinkActive="active"> Final </a>
-            </li>
-            <li class="nav-item" *ngIf="isLogged">
-                <a class="nav-link" [routerLink]="['/principal/user/inventory']" routerLinkActive="active"> Inventario</a>
-            </li>
         </ul>
         <a class="navbar-brand hidden-md-down"></a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item" *ngIf="!isLogged">
-                <a class="nav-link" [routerLink]="['/user/login']" routerLinkActive="active"> Login </a>
+                <a class="nav-link" [routerLink]="['/user/login']" routerLinkActive="active">
+                    <i class="fas fa-user"></i> Login
+                </a>
             </li>
         </ul>
     </div>

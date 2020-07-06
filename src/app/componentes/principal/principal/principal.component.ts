@@ -10,7 +10,7 @@ export class PrincipalComponent implements OnInit {
 
   constructor(private autenticar: LoginService) { }
 
-  public isLogged = false;
+  public isLogged: boolean;
 
   ngOnInit(){
     this.autenticar.ObtenerUsuario().subscribe(auth => {

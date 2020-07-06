@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     if (mail === ''){
       this.toast.error('El campo email está vacio');
     }
-    if (pass === ''){
+    else if (pass === ''){
       this.toast.error('El campo password está vacio');
     } else {
       this.login.Login(this.email, this.password)

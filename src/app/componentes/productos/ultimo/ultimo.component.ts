@@ -113,22 +113,22 @@ export class UltimoComponent implements OnInit {
     if (operador === '') {
       this.toast.error('El campo operador está vacio');
     }
-    if (linea === '') {
+    else if (linea === '') {
       this.toast.error('El campo linea está vacio');
     }
-    if (horario === 'Seleccione') {
+    else if (horario === 'Seleccione') {
       this.toast.error('No ha seleccionado ningún horario');
     }
-    if (perfil === 'Seleccione') {
+    else if (perfil === 'Seleccione') {
       this.toast.error('No ha seleccionado ningún perfil');
     }
-    if (fecha === '') {
+    else if (fecha === '') {
       this.toast.error('El campo fecha está vacio');
     }
-    if (codigo === 'Seleccione') {
+    else if (codigo === 'Seleccione') {
       this.toast.error('No ha seleccionado ningún codigo');
     }
-    if (medidas === 'Seleccione') {
+    else if (medidas === 'Seleccione') {
       this.toast.error('No ha seleccionado ninguna medidas');
     }
     else{
