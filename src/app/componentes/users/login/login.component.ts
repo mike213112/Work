@@ -17,13 +17,14 @@ export class LoginComponent implements OnInit {
               private login: LoginService,
               private toast: ToastsService) { }
 
-  ngOnInit(){
+  ngOnInit() {
 
   }
 
   onSubmitLogin(){
-    const mail = (<HTMLInputElement>document.getElementById('email')).value;
-    const pass = (<HTMLInputElement>document.getElementById('password')).value;
+    const mail = (document.getElementById('email') as HTMLInputElement).value;
+    const pass = (document.getElementById('password') as HTMLInputElement).value;
+
     if (mail === ''){
       this.toast.error('El campo email está vacio');
     }
@@ -38,7 +39,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/user/login']);
       this.toast.error('Sus credenciales son incorrectas');
       });
-    }
+      }
   }
 
 }

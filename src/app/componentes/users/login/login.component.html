@@ -37,12 +37,12 @@
               <h3 class="login-heading mb-6 font-weight-bold" style="text-align: center;">Bienvenido</h3>
               <form (submit)="onSubmitLogin()">
                 <div class="form-label-group">
-                  <input id="email" type="email" class="form-control" name="email"  [(ngModel)]="email" placeholder="Correo Electronico" required autofocus>
+                  <input id="email" type="email" name="email"  [(ngModel)]="email" class="form-control" placeholder="Correo Electronico" required autofocus>
                   <label for="email">Correo Electronico</label>
                 </div>
 
                 <div class="form-label-group">
-                  <input id="password" type="password"  name="password" [(ngModel)]="password" class="form-control" placeholder="Contraseña" required>
+                  <input id="password" type="password" name="password" [(ngModel)]="password" class="form-control" placeholder="Contraseña" required>
                   <label for="password">Contraseña</label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" (click)="onSubmitLogin()">
